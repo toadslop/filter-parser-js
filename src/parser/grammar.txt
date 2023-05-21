@@ -1,3 +1,7 @@
+expression → logical
+logical → comparison ( ( "and" | "or" ) comparison )*
+comparison → ident op literal | "not"? "(" logical ")"
+
 expression → binary
 | logical
 | unary
