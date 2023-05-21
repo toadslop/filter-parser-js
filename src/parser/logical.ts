@@ -1,12 +1,14 @@
-import { LogicOp } from './operators';
+import { Expr } from './expression';
+import { LogicOp } from './logicOp';
 
-// export class Logical {
-// 	readonly rightExpr: Expression;
-// 	readonly logicOp: LogicOp;
-// 	readonly leftExpr: Expression;
-// 	constructor(rightExpr: Expression, logicOp: LogicOp, leftExpr: Expression) {
-// 		this.rightExpr = rightExpr;
-// 		this.logicOp = logicOp;
-// 		this.leftExpr = leftExpr;
-// 	}
-// }
+export class Logical {
+	readonly leftExpr: Expr;
+	readonly logicOp: LogicOp;
+	readonly rightExpr: Expr;
+
+	constructor(leftExpr: Expr, logicOp: LogicOp, rightExpr: Expr) {
+		this.leftExpr = leftExpr;
+		this.logicOp = logicOp;
+		this.rightExpr = rightExpr;
+	}
+}
