@@ -4,13 +4,14 @@
 	"description": "",
 	"main": "./lib/cjs/index.js",
 	"module": "./lib/esm/index.js",
+	"type": "module",
 	"files": [
 		"lib/"
 	],
 	"scripts": {
 		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
 		"prepublishOnly": "pnpm run test & pnpm run format && pnpm run lint && pnpm run build",
-		"format": "npx prettier --write .",
+		"format": "npx prettier --write ./src",
 		"lint": "eslint --ignore-path .eslintignore --ext .ts .",
 		"test": "jest"
 	},
